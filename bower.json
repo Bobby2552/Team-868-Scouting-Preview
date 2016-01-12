@@ -1,0 +1,27 @@
+{
+  "name": "Team-868-Scouting-Preview",
+  "homepage": "printing.asuscomm.com:868",
+  "authors": [
+    "Ben Scholer <benscholer3248511@gmail.com>"
+  ],
+  "description": "A live preview of FRC Team 868's Scouting System",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "plotlyjs": "plotly#~0.0.2"
+  }
+}
