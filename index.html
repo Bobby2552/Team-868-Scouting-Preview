@@ -1,13 +1,25 @@
-<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<HTML>
-  <HEAD>
-    <TITLE>
-      Scouting System Preview
-    </TITLE>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  </HEAD>
-  <BODY>
-    <H1>Team 868 Scouting System Preview</H1>
-    <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas orci elit, pharetra id odio a, sollicitudin consectetur ligula. Nunc rutrum tincidunt elit sed venenatis. Etiam vitae fringilla velit, sit amet accumsan mauris. In semper, sapien et luctus tristique, metus nisi posuere risus, at dictum quam nisi in felis. Quisque quis mattis lectus, eget sollicitudin sapien. Aliquam quis urna rutrum, fermentum nisi ac, tempus ex. Ut commodo ligula eget nisi consectetur accumsan. Nulla facilisi. Nunc egestas imperdiet tortor, a faucibus tortor accumsan a. Nullam rutrum quam eget tempus accumsan. Sed finibus eget est ut convallis. Morbi ut condimentum est, sit amet lobortis ligula. Suspendisse aliquam purus risus, non blandit massa maximus vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras pulvinar ante aliquet, tincidunt sapien non, gravida sem. Integer eleifend ac ligula sit amet consequat.</P>
-  </BODY>
-  </HTML>
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script src="plotly-latest.min.js"></script>
+	</head>
+	<body>
+		<div id="tester" style="width:600px;height:250px;"></div>
+		<script>
+		var data = [{
+		x : ["Tippecanoe District", "Warren District", "Queen City Regional", "District Champs"],
+		y : [23, 34, 45, 56],
+		line : {width: 1}
+		}];
+		var layout = {
+		yaxis : {title: "Testing Graph"},
+		xaxis : 
+		{title: "Strings",
+		tickformat: "%S"
+		}}
+	TESTER = document.getElementById('tester');
+	Plotly.plot(TESTER, data, layout);
+</script>
+	</body>
+</html>
