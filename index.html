@@ -11,7 +11,7 @@
 		<a href="anotherThing.html">Single </a>/
 		<a href="yetAnotherThing.html">Comparison</a>
 	</h2>
-	<div id="tester" style="width:600px;height:250px;"></div>
+	<div id="tester" style="width:85%;height:50%;"></div>
 	<script>
 		var data = [{
 			x : ["Tippecanoe District", "Warren District", "Queen City Regional", "District Champs"],
@@ -19,7 +19,6 @@
 			line : {width: 1},
 			margin : {t : 4}
 		}];
-		var result = regression('linear', data);
 		var layout = {
 			yaxis : {title: "Testing Graph"},
 			xaxis : {
@@ -29,7 +28,7 @@
 		}
 		console.log(result);
 	TESTER = document.getElementById('tester');
-	Plotly.plot(TESTER, result, layout);
+	Plotly.plot(TESTER, data, layout);
 	</script>
 	</body>
 </html>
