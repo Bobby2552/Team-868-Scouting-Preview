@@ -5,21 +5,28 @@
 		<script src="plotly-latest.min.js"></script>
 	</head>
 	<body>
-		<div id="tester" style="width:600px;height:250px;"></div>
-		<script>
-		var data = [{
-		x : ["Tippecanoe District", "Warren District", "Queen City Regional", "District Champs"],
-		y : [23, 34, 45, 56],
-		line : {width: 1}
-		}];
-		var layout = {
-		yaxis : {title: "Testing Graph"},
-		xaxis : 
-		{title: "Strings",
-		tickformat: "%S"
-		}}
-	TESTER = document.getElementById('tester');
-	Plotly.plot(TESTER, data, layout);
-</script>
+	  <div id="myDiv" style="width: 1000px; height: 1000px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+	  <script>
+	    var trace1 = {
+	    x: [1, 2, 3, 4],
+	    y: [10, 11, 12, 13],
+	    mode: 'markers',
+	    marker: {
+	    size: [40, 60, 80, 100]
+	    }
+	    };
+
+	    var data = [trace1];
+
+	    var layout = {
+	    title: 'Marker Size',
+	    showlegend: false,
+	    height: 400,
+	    width: 480
+	    };
+
+	    Plotly.newPlot('myDiv', data, layout);
+	  </script>
+	  
 	</body>
 </html>
