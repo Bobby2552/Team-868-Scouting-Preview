@@ -2,33 +2,88 @@
 
 <html>
 	<head>
+		<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 		<script src="plotly-latest.min.js"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="formatting.css">
+		
+
+		<script src="index.js"></script>
 	</head>
 	<body>
 	<h1>TechHOUNDS Team 868</h1>
-	<h2>
-		<a href="generalStats.html">General Stats</a>/
-		<a href="single.html">Single </a>/
-		<a href="comparison.html">Comparison</a>
-	</h2>
-	<div id="tester" style="width:85%;height:50%;"></div>
+	<div class="container" id="initialMenu">
+		<div class="row">
+			<div class="col-sm-4">
+				<h2>
+					<a href="index.html"><u>General Stats</u></a>
+				</h2>
+			</div>
+			<div class="col-sm-4">
+				<h2>
+					<a href="single.html">Single</a>
+				</h2>
+			</div>
+			<div class="col-sm-4">
+				<h2>
+					<a href="comparison.html">Comparison</a>
+				</h2>
+			</div>
+		</div>
+	</div>
+	<br />
+	<div class="container" id="graphOptions">
+		<div class="row">
+			<div class = "col-sm-2">
+				<input type="checkbox" name="options"> Option 1
+			</div>
+			<div class = "col-sm-2">
+				<input type="checkbox" name="options"> Option 2
+			</div>
+			<div class = "col-sm-2">
+				<input type="checkbox" name="options"> Option 3
+			</div>
+			<div class = "col-sm-2">
+				<input type="checkbox" name="options"> Option 4
+			</div>
+			<div class = "col-sm-2">
+				<input type="checkbox" name="options"> Option 5
+			</div>
+			<div class = "col-sm-2">
+				<input type="checkbox" name="options"> Option 6
+			</div>
+		</div>
+	</div>
+	
+		<div id="tester" style="width: 90%;height: 50%;">
+		</div>
+	
+
+	
 	<script>
-		var data = [{
-			x : ["Tippecanoe District", "Warren District", "Queen City Regional", "District Champs"],
-			y : [23, 34, 45, 56],
-			line : {width: 2},
-			margin : {t : 4}
-		}];
-		var layout = {
-			yaxis : {title: "Testing Graph"},
-			xaxis : {
-				title: "Competition",
-				tickformat: "%S"
-			}
+	var trace1 = {
+		x : ["Tippecanoe District", "Warren District", "Queen City Regional", "District Champs"], 
+		y: [10, 15, 13, 17], 
+		type: 'scatter'
+	};
+	var data = [trace1];
+	var layout = {
+		yaxis : {title: "Shooting Ability"},
+		xaxis : {
+			title: "Competition",
+			tickformat: "%S"
 		}
-		console.log(result);
-	TESTER = document.getElementById('tester');
-	Plotly.plot(TESTER, data, layout);
-	</script>
+	};
+Plotly.newPlot('tester', data, layout);
+</script>
 	</body>
 </html>

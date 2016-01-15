@@ -1,7 +1,59 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <h1> Comparison </h1>
-    </head>
-  </html>
+	<head>
+	<script src="plotly-latest.min.js"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="formatting.css">
+	</head>
+	<body>
+	<h1>TechHOUNDS Team 868</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<h2>
+					<a href="index.html">General Stats</a>
+				</h2>
+			</div>
+			<div class="col-sm-4">
+				<h2>
+					<a href="single.html">Single</a>
+				</h2>
+			</div>
+			<div class="col-sm-4">
+				<h2>
+					<a href="comparison.html"><u>Comparison</u></a>
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div id="tester" style="width: 90%;height: 50%;">
+	</div>
+	
+	<script>
+	var trace1 = {
+		x : ["Tippecanoe District", "Warren District", "Queen City Regional", "District Champs"], 
+		y: [10, 15, 13, 17], 
+		type: 'scatter'
+	};
+	var data = [trace1];
+	var layout = {
+		yaxis : {title: "Shooting Ability"},
+		xaxis : {
+			title: "Competition",
+			tickformat: "%S"
+		}
+	};
+Plotly.newPlot('tester', data, layout);
+</script>
+	</body>
+</html>

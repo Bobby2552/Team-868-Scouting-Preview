@@ -1,0 +1,16 @@
+h1{
+	color: black;
+	text-align: center;
+	font-family: helvetica, "Times New Roman", serif;
+	font-size: 36pt;
+}
+
+h2{
+	color: blue;
+	text-align: center;
+}
+
+#tester{
+	align: center;
+	color: black;
+}
