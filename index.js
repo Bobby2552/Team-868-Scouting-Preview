@@ -1,7 +1,7 @@
-
-
 $(document).ready(function() {
 	var checkboxes = $('#graphOptions input[type="checkbox"]');
-	checkboxes.change(handler)
+	checkboxes.change(function(){//every time a checkbox changes state
+		
+	})
 	
 });
